@@ -1,18 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
-import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   public employees: Employee[] = [];
   
   constructor(private employeeService: EmployeeService){ }
